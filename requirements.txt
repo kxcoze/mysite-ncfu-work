@@ -15,8 +15,6 @@ itsdangerous==2.0.1
 Jinja2==3.0.1
 Mako==1.1.6
 MarkupSafe==2.0.1
-# Editable install with no version control (myapplication==0.0.0)
--e /home/kxcoze/py/study/flask_practice/project1
 SQLAlchemy==1.4.25
 Werkzeug==2.0.1
 WTForms==2.3.3
