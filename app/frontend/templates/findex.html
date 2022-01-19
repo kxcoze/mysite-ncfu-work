@@ -11,7 +11,7 @@
   <!-- main css file -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
   <title>My Portfolio</title>
-  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <!-- Modal window -->
@@ -36,26 +36,26 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand text-uppercase" href="#brand"><img src="{{ url_for('static', filename='images/logo3.png') }}" alt=""></a>
+      <a class="navbar-brand text-uppercase" href="#home"><img src="{{ url_for('static', filename='images/logo3.png') }}" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Skills</a>
+            <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -64,6 +64,7 @@
   <!-- End Navbar -->
 
   <!-- Home Banner -->
+  <a id="home"></a>
   <section class="home_banner">
     <div class="banner">
       <div class="container">
@@ -114,6 +115,7 @@
   <!-- End Home Banner -->
 
   <!-- About -->
+  <a id="about"></a>
   <section class="about_area section_gap">
     <div class="container">
       <div class="row justify-content-start align-items-center">
@@ -135,7 +137,6 @@
   <!-- End About -->
 
   <!-- Brand -->
-  <a name="brand"></a>
   <section class="brand_area section_gap_bottom">
     <div class="container">
       <div class="row justify-content-center">
@@ -229,6 +230,7 @@
   <!-- End Brand -->
 
   <!-- Skill -->
+  <a id="skills"></a>
   <section class="skill_area section_gap_bottom">
     <div class="container">
       <div class="row justify-content-center">
@@ -276,6 +278,7 @@
   <!-- End Skill -->
 
   <!-- Portfolio -->
+  <a id="portoflio"></a>
   <section class="portfolio_area section_gap_bottom" id="portfolio">
     <div class="container">
       <div class="row">
@@ -467,7 +470,7 @@
           <div class="testi_item">
             <div class="row">
               <div class="col-lg-4">
-                <img src="" alt="">
+                <img src="{{ url_for('static', filename='images/peoples/t1.jpg') }}" alt="">
               </div>
               <div class="col-lg-8">
                 <div class="testi_text">
@@ -480,7 +483,7 @@
           <div class="testi_item">
             <div class="row">
               <div class="col-lg-4">
-                <img src="" alt="">
+                <img src="{{ url_for('static', filename='images/peoples/t2.jpg') }}" alt="">
               </div>
               <div class="col-lg-8">
                 <div class="testi_text">
@@ -493,7 +496,7 @@
           <div class="testi_item">
             <div class="row">
               <div class="col-lg-4">
-                <img src="" alt="">
+                <img src="{{ url_for('static', filename='images/peoples/t2.jpg') }}" alt="">
               </div>
               <div class="col-lg-8">
                 <div class="testi_text">
@@ -506,7 +509,7 @@
           <div class="testi_item">
             <div class="row">
               <div class="col-lg-4">
-                <img src="" alt="">
+                <img src="{{ url_for('static', filename='images/peoples/t1.jpg') }}" alt="">
               </div>
               <div class="col-lg-8">
                 <div class="testi_text">
@@ -519,7 +522,7 @@
           <div class="testi_item">
             <div class="row">
               <div class="col-lg-4">
-                <img src="" alt="">
+                <img src="{{ url_for('static', filename='images/peoples/t2.jpg') }}" alt="">
               </div>
               <div class="col-lg-8">
                 <div class="testi_text">
@@ -532,7 +535,7 @@
           <div class="testi_item">
             <div class="row">
               <div class="col-lg-4">
-                <img src="" alt="">
+                <img src="{{ url_for('static', filename='images/peoples/t1.jpg') }}" alt="">
               </div>
               <div class="col-lg-8">
                 <div class="testi_text">
@@ -556,11 +559,11 @@
           <div class="subscription_box text-center">
             <h2 class="text-uppercase ">Subscribe to track updates!</h2>
             <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div class="subscribe-form" id="mc_embed_signup">
+            <div class="subscribe-form">
               <form id="myForm" target="_self" class="subscription relative" method="get" action="#" novalidate="true" required="" type="email" novalidate="true">
                 <div class="d-flex justify-content-center">
                   <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="" name="email">
                     <label for="floatingInput">Email address</label>
                   </div>
                   <button class="primary-btn hover d-inline submit-btn">Get Started</button>
@@ -576,6 +579,7 @@
   <!-- End Newsletter -->
 
   <!-- Footer -->
+  <a id="contact"></a>
   <footer class="footer_area">
     <div class="container">
       <div class="row justify-content-center">

@@ -43,3 +43,29 @@ $(document).ready(function(){
     }
   });
 });
+
+
+// a sliding
+// $('a[href^="#"]').bind('click.smoothscroll',function (e) {
+//   e.preventDefault();
+//   var target = this.hash,
+//   $target = $(target);
+//   $('html, body').stop().animate({
+//     'scrollTop': $target.offset().top - 50
+//   }, 500, 'swing', function () {
+//     window.location.hash = target;
+//   });
+// });
+
+$(document).ready(function(){
+   $('#navbarNav').on("click", "a", function (e) {
+       e.preventDefault();
+       var id  = $(this).attr('href');
+       var delta = 75;
+       if (id == '#skills') {
+         delta = 175;
+       }
+       var top = $(id).offset().top - delta;
+       $('body,html').animate({scrollTop: top}, 300);
+   });
+});
