@@ -5,8 +5,8 @@ var darkLabel = "darkModeLabel";
 // var lightLang = "Light";
 // fa-moon
 var imgID = "logo";
-var darkImg = "images/dark_logo.png";
-var lightImg = "images/logo.png";
+var darkImg = "static/images/dark_logo.png";
+var lightImg = "static/images/logo.png";
 
 window.addEventListener('load', function () {
   if (darkMode) {
@@ -25,8 +25,8 @@ function initTheme() {
   darkThemeSelected ? $('#darkModeLabel i').addClass('fa-moon') : $('#darkModeLabel i').addClass('fa-sun');
   // darkThemeSelected ? document.getElementById(darkLabel).innerHTML = darkLang : document.getElementById(darkLabel).innerHTML = lightLang;
   darkThemeSelected ? $('.navbar').addClass('navbar-dark') : $('.navbar').removeClass('navbar-light');
-  darkThemeSelected ? $('#postgresqlIcon').attr('src', "images/dark_postgresql.png") : $('#postgresqlIcon').attr('src', "images/postgresql.png");
-  darkThemeSelected ? $('#aiogramIcon').attr('src', "images/dark_aiogram.png") : $('#aiogramIcon').attr('src', "images/aiogram.png");
+  darkThemeSelected ? $('#postgresqlIcon').attr('src', "static/images/dark_postgresql.png") : $('#postgresqlIcon').attr('src', "static/images/postgresql.png");
+  darkThemeSelected ? $('#aiogramIcon').attr('src', "static/images/dark_aiogram.png") : $('#aiogramIcon').attr('src', "static/images/aiogram.png");
 }
 
 function resetTheme() {
@@ -40,8 +40,8 @@ function resetTheme() {
 
     $('#darkModeLabel i').addClass('fa-moon');
     $('#darkModeLabel i').removeClass('fa-sun');
-    $('#postgresqlIcon').attr('src', "images/dark_postgresql.png");
-    $('#aiogramIcon').attr('src', "images/dark_aiogram.png");
+    $('#postgresqlIcon').attr('src', "static/images/dark_postgresql.png");
+    $('#aiogramIcon').attr('src', "static/images/dark_aiogram.png");
   } else {
     document.body.removeAttribute('data-theme');
     localStorage.removeItem('darkMode');
@@ -52,7 +52,7 @@ function resetTheme() {
 
     $('#darkModeLabel i').addClass('fa-sun');
     $('#darkModeLabel i').removeClass('fa-moon');
-    $('#postgresqlIcon').attr('src', "images/postgresql.png");
-    $('#aiogramIcon').attr('src', "images/aiogram.png");
+    $('#postgresqlIcon').attr('src', "static/images/postgresql.png");
+    $('#aiogramIcon').attr('src', "static/images/aiogram.png");
   }
 }
