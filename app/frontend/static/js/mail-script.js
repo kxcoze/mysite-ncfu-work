@@ -1,5 +1,7 @@
 // -------   Mail Send ajax
 
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
 $(document).ready(function() {
   var form = $('#myForm'); // contact form
   var submit = $('.submit-btn'); // submit button
@@ -8,6 +10,7 @@ $(document).ready(function() {
   // form submit event
   form.on('submit', function(e) {
     e.preventDefault(); // prevent default form submit
+    
     if (document.querySelector('[id="floatingInput"]').value){
       $.ajax({
         url: 'https://www.google.ru', // form action url
